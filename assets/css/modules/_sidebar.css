@@ -1,0 +1,141 @@
+.l-sidebar {
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 300px;
+  background: #1e262c;
+  z-index: 99;
+  color: white;
+}
+
+.l-sidebar__search {
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.l-sidebar__title {
+  text-align: center;
+  margin: 25px auto 50px;
+}
+
+.l-sidebar__icon {
+  width: 20px;
+}
+
+.l-sidebar__text {
+  font-size: 20px;
+}
+
+.l-sidebar__button {
+  width: 250px;
+  margin: 0 auto;
+  border-bottom: 1px solid #31373e;
+}
+
+.l-sidebar__language {
+  padding: 20px 0;
+  text-align: center;
+  color: #a9a9a9;
+  font-size: 15px;
+}
+
+.l-sidebar__menu {
+  width: 100%;
+}
+
+.l-sidebar__menu2 {
+  width: 100%;
+  border-bottom: 1px solid #31373e;
+}
+
+.l-sidebar__list {
+  font-size: 16px;
+  padding: 18px 18px;
+  color: #a9a9a9;
+  position: relative;
+}
+
+.l-sidebar__list2 {
+  font-size: 14px;
+  padding: 11px 35px;
+  color: #a9a9a9;
+  position: relative;
+}
+
+.l-sidebar__list2:last-child {
+  margin-bottom: 10px;
+}
+
+.l-sidebar__list:hover {
+  background-color: #3a434c;
+}
+
+.l-sidebar__list2:hover {
+  background-color: #3a434c;
+}
+
+.l-sidebar__other {
+  display: flex;
+  font-size: 14px;
+  padding: 12px 18px;
+  color: #696969;
+}
+
+.l-sidebar__other-list:hover {
+  color: #d3d3d3;
+}
+
+.c-input__area {
+  height: 46px;
+  width: 270px;
+  border: none;
+  border-radius: 25px;
+  padding-left: 30px;
+}
+
+.c-input__area:focus {
+  outline: 1.5px solid #ff7f50;
+}
+
+.l-sidebar__list:first-child:after {
+  content: ">";
+  color: #a9a9a9;
+  display: inline-block;
+  position: absolute;
+  font-size: 13px;
+  top: 18px;
+  right: 30px;
+}
+
+.l-sidebar__list2:after {
+  content: ">";
+  color: #a9a9a9;
+  display: inline-block;
+  position: absolute;
+  font-size: 13px;
+  top: 11px;
+  right: 30px;
+}
+
+@media screen and (max-width: 999px) {
+  .l-sidebar {
+    display: none;
+  }
+
+  .l-sidebar__cover {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .l-sidebar {
+    display: none;
+  }
+
+  .l-sidebar__cover {
+    display: none;
+  }
+}

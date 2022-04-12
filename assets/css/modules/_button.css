@@ -1,0 +1,28 @@
+.c-button {
+  display: inline-block;
+  width: 250px;
+  padding: 1em 3em;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.signin {
+  background-color: #d2691e;
+  margin-bottom: 10px;
+}
+
+.signin:hover {
+  background-color: #c85e36;
+}
+
+.signup {
+  background-color: transparent;
+  border: 1px solid #fff;
+  margin-bottom: 10px;
+}
