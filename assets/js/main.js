@@ -130,17 +130,46 @@ $(() => {
    
     const page = $('.pageLayer');
     $('#btn').on('click', function(){
-      $('.l-sp__header-menu').toggleClass('menu-open');  /* 4/13色々追加 */
+      $('.l-sp__header-menu').toggleClass('menu-open'); 
       $('.l-sidebar').toggleClass('inview');
       $('.l-sp__header').toggleClass('inview');
       page.toggleClass('inview');
+      if($('.c-input__area').hasClass('active')){
+        $('.c-input__area').removeClass('active');
+        $('.l-sp__header-search').removeClass('outview');
+        $('.l-sp__header-title').removeClass('up');
+      }
     });
 
     page.on('click', function(){
-      if($('.l-sp__header-menu').hasClass('menu-open')){  /* 4/13色々追加 */
+      if($('.l-sp__header-menu').hasClass('menu-open')){ 
         $('.l-sp__header-menu').removeClass('menu-open');
         $('.l-sidebar').removeClass('inview');
         $('.l-sp__header').removeClass('inview');
         page.removeClass('inview');
       }
     });
+
+  function inputArea(){
+      if($('.c-input__area').hasClass('inactive')){
+        $('.c-input__area').removeClass('inactive');
+        $('.l-sp__header-search').removeClass('inview');
+        $('.l-sp__header-title').removeClass('down');
+      }
+      $('.c-input__area').toggleClass('active');
+      $('.l-sp__header-title').toggleClass('up');
+      $('.l-sp__header-search').toggleClass('outview');
+    }
+
+    $('.l-main').on('click', function(){
+      $('.c-input__area').toggleClass('inactive');
+      $('.l-sp__header-search').toggleClass('inview');
+      if($('.c-input__area').hasClass('active')){
+        $('.l-sp__header-title').toggleClass('down');
+        $('.l-sp__header-title').removeClass('up');
+        setTimeout(() => {
+          $('.c-input__area').removeClass('active');
+          $('.l-sp__header-search').removeClass('outview');
+        },500);
+      }
+    }); 
