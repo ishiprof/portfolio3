@@ -101,8 +101,8 @@ $(() => {
         {
         breakpoint: 752,
         settings: {
-          dots: false,
-          arrows: false,
+          dots: true,
+          arrows: true,
         }
       },
       {
@@ -110,7 +110,8 @@ $(() => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false,
+          dots: true,
+          arrows: true,
         }
       }
     ]
@@ -118,29 +119,28 @@ $(() => {
 
     $('.p-game__slider').slick({
       infinite: true,
-      slidesToShow: 6.5,
-      slidesToScroll: 6,
+      slidesToShow: 6,
+      slidesToScroll: 4,
       arrows: true,
       dots: true,
       prevArrow: '<div class="p-game__slider-prev c-slide__arrow"><</div>',
       nextArrow: '<div class="p-game__slider-next c-slide__arrow">></div>',
       variableWidth: true,
-    //   responsive: [
-    //     {
-    //     breakpoint: 959,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //       arrows: false,
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 480,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //       arrows: false,
-    //     }
-    //   }
-    // ]
+    });
+   
+    const page = $('.pageLayer');
+    $('#btn').on('click', function(){
+      $('.l-sp__header-menu').toggleClass('menu-open');  /* 4/13色々追加 */
+      $('.l-sidebar').toggleClass('inview');
+      $('.l-sp__header').toggleClass('inview');
+      page.toggleClass('inview');
+    });
+
+    page.on('click', function(){
+      if($('.l-sp__header-menu').hasClass('menu-open')){  /* 4/13色々追加 */
+        $('.l-sp__header-menu').removeClass('menu-open');
+        $('.l-sidebar').removeClass('inview');
+        $('.l-sp__header').removeClass('inview');
+        page.removeClass('inview');
+      }
     });
