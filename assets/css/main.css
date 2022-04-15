@@ -399,7 +399,7 @@ img {
   color: #d3d3d3;
 }
 
-.c-input__area {
+.c-input__text {
   height: 46px;
   width: 270px;
   border: none;
@@ -407,7 +407,7 @@ img {
   padding-left: 30px;
 }
 
-.c-input__area:focus {
+.c-input__text:focus {
   outline: 1.5px solid #ff7f50;
 }
 
@@ -731,9 +731,15 @@ img {
 }
 
 .l-footer__list {
-  width: 45%;
+  width: 43%;
   height: 20px;
+  padding-right: 5px;
 }
+
+.l-footer__list:nth-child(2n) {
+  margin-left: 10%;
+  padding-right: 0;
+}  
 
 .l-footer__setting  {
   width: 38%;
@@ -806,7 +812,11 @@ select:focus {
 }
 
 
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 480px) {
+  .l-footer__list {
+    margin-bottom: 20px;
+  }
+}
 
 
 @media screen and (min-width: 1000px) {
